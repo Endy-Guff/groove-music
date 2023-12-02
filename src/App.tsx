@@ -1,14 +1,8 @@
 import './App.css'
-import {Button} from "./components/button/button.tsx";
+import {Router} from "./router.tsx";
 
-function App() {
-
-    return (
-        <div>
-            <Button variant={'authorization'}>12</Button>
-        </div>
-
-    )
-}
+export const App = () => (
+    <Router/>
+)
 
 export default App
