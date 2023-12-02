@@ -1,0 +1,15 @@
+.btn{
+  cursor: pointer;
+  border: none;
+  &.authorization{
+    width: 350px;
+    height: 65px;
+
+    color: #EFEEE0;
+    background: #66BCFA;
+    border-radius: 12px;
+    font-family: 'Quicksand';
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
