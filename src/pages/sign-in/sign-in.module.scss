@@ -1,0 +1,39 @@
+.wrapper {
+  height: 100vh;
+  background: url(../../assets/images/reg-bg.jpeg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+  .text {
+    color: #EFEEE0;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .formBox {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .link {
+    color: #EFEEE0;
+    font-family: 'Quicksand';
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: underline;
+    display: block;
+    text-align: end;
+  }
+}

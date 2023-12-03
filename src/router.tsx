@@ -5,11 +5,12 @@ import {
     RouteObject,
     RouterProvider,
 } from 'react-router-dom'
+import {SignIn} from "./pages/sign-in/sign-in.tsx";
 
 const publicRoutes: RouteObject[] = [
     {
         path: '/sign-in',
-        element: <div>login</div>,
+        element: <SignIn/>,
     },
     {
         path: '/sign-up',
@@ -18,7 +19,7 @@ const publicRoutes: RouteObject[] = [
 ]
 
 const privateRoutes: RouteObject[] = [
-    { path: '*', element: <Navigate to={'/general'} /> },
+    {path: '*', element: <Navigate to={'/general'}/>},
     {
         path: '/general',
         element: <div>general</div>,
@@ -26,16 +27,16 @@ const privateRoutes: RouteObject[] = [
 ]
 
 const router = createBrowserRouter([
-    { element: <PrivateRoutes />, children: privateRoutes },
+    {element: <PrivateRoutes/>, children: privateRoutes},
     ...publicRoutes,
 ])
 
-export const Router= () => {
-    return <RouterProvider router={router} />
+export const Router = () => {
+    return <RouterProvider router={router}/>
 }
 
 function PrivateRoutes() {
     const isAuth = true
 
-    return isAuth ? <Outlet /> : <Navigate to={'/sign-in'} />
+    return isAuth ? <Outlet/> : <Navigate to={'/sign-in'}/>
 }
