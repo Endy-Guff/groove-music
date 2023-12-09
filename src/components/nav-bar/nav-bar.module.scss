@@ -1,0 +1,41 @@
+.wrapper {
+  padding: 20px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 52px;
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 52px;
+    padding: 25px 15px;
+    border-radius: 32px;
+    background: var(--dark-alt, #1A1E1F);
+
+    .btn {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      background: none;
+      border: none;
+
+      svg path{
+        transition: .3s;
+      }
+
+      &:hover svg path {
+        fill: #66BCFA;
+      }
+    }
+  }
+}
