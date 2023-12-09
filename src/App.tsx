@@ -1,11 +1,9 @@
 import './App.css'
-// import {Router} from "./router.tsx";
-import {Header} from "./components/header/header.tsx";
+import {Router} from "./router.tsx";
 
 export const App = () => {
     return <>
-        {/*<Router/>*/}
-        <Header/>
+        <Router/>
     </>
 }
 

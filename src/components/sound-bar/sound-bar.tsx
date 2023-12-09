@@ -10,6 +10,7 @@ import {Progress} from "./progress.tsx";
 import {Volume} from "./volume.tsx";
 
 interface SoundBarProps {
+    className?: string
     track: string
     poster: string
     title: string
@@ -18,7 +19,7 @@ interface SoundBarProps {
     prevTrack: () => void
 }
 
-export const SoundBar: FC<SoundBarProps> = ({title, author, poster, track, prevTrack, nextTrack}) => {
+export const SoundBar: FC<SoundBarProps> = ({className, title, author, poster, track, prevTrack, nextTrack}) => {
     const playerRef = useRef<ReactPlayer | null>(null);
 
     const [volume, setVolume] = useState(0.5);
@@ -69,7 +70,7 @@ export const SoundBar: FC<SoundBarProps> = ({title, author, poster, track, prevT
                 volume={volume}
                 muted={isMuted}
             />
-            <div className={s.wrapper}>
+            <div className={cn(s.wrapper, className)}>
                 <Progress fullDuration={fullDuration} playingSecond={playingSecond} handleMouseMove={handleMouseMove}
                           ref={playerRef}/>
                 <GlassCard className={s.content}>

@@ -7,6 +7,12 @@ import {NavBtn} from "./nav-btn.tsx";
 import {useLocation} from "react-router-dom";
 import {Profile} from "../../assets/icons/profile.tsx";
 import {Logout} from "../../assets/icons/logout.tsx";
+import cn from "classnames";
+import {FC} from "react";
+
+interface NavBarProps {
+    className?: string
+}
 
 const bar1 = [
     {path: '/general', icon: Home},
@@ -18,17 +24,19 @@ const bar2 = [
     {path: '/sign-in', icon: Logout},
 ]
 
-export const NavBar = () => {
+export const NavBar:FC<NavBarProps> = ({className}) => {
     const location = useLocation();
 
     return (
-        <div className={s.wrapper}>
+        <div className={cn(s.wrapper, className)}>
             <img className={s.logo} src={logo} alt=""/>
             <NavContainer>
-                {bar1.map(({path, icon: Icon}) => <NavBtn path={path}><Icon active={location.pathname===path}/></NavBtn>)}
+                {bar1.map(({path, icon: Icon}) => <NavBtn path={path}><Icon
+                    active={location.pathname === path}/></NavBtn>)}
             </NavContainer>
             <NavContainer>
-                {bar2.map(({path, icon: Icon}) => <NavBtn path={path}><Icon active={location.pathname===path}/></NavBtn>)}
+                {bar2.map(({path, icon: Icon}) => <NavBtn path={path}><Icon
+                    active={location.pathname === path}/></NavBtn>)}
             </NavContainer>
         </div>
     );

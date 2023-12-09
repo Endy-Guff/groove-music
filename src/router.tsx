@@ -6,7 +6,7 @@ import {
     RouterProvider,
 } from 'react-router-dom'
 import {SignIn} from "./pages/sign-in/sign-in.tsx";
-import {NavBar} from "./components/nav-bar/nav-bar.tsx";
+import {Layout} from "./components/layout/layout.tsx";
 
 const publicRoutes: RouteObject[] = [
     {
@@ -23,7 +23,7 @@ const privateRoutes: RouteObject[] = [
     {path: '*', element: <Navigate to={'/general'}/>},
     {
         path: '/general',
-        element: <NavBar/>,
+        element: <Layout/>,
     },
 ]
 

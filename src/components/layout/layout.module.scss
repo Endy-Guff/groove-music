@@ -1,0 +1,25 @@
+.wrapper {
+  position: relative;
+
+  .content {
+    padding-bottom: 90px;
+    height: 100vh;
+  }
+
+  .header {
+    position: absolute;
+    left: 60px;
+    top: 0;
+  }
+
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .soundbar{
+    position: absolute;
+    bottom: 0;
+  }
+}
